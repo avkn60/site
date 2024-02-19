@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+/* main props */
+#burger-button {
+    display: none;
+}
+#menuList {
+    display: none;
+}
+.mobile-menu .menu-list {
+    margin-top: 10px;
+    list-style: none;
+}
+.container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.button-outline-light {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 45px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+.button-outline-light:hover {
+    background-color: #ffffff;
+    color: #418fe7;
+}
+.button-primary {
+    background-color: #2d8fff;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 45px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+.button-primary:hover {
+    opacity: 0.6;
+}
+.primary-title {
+    color: #2d8fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+/* blocks */
+
+/* header */
+.header {
+    padding: 20px 0;
+    background-color: black;
+}
+.logo {
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav-list {
+    display: inline-block;
+    margin-right: 10px;
+}
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* header */
+
+/* home */
+.home {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Anime.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+.home-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.home-description {
+    width: 60%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+/* home */
+
+/* last-news */
+.last-news, .news {
+    background-color: #161515;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.news-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    flex-basis: 22%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    padding: 20px;
+}
+.news-img {
+    text-align: center;
+}
+.news-img img {
+    width: 100%;
+    object-fit: cover;
+}
+.news-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.news-date {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+/* last-news */
+
+
+/* news-detail */
+.bg{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Anime.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.news-detail {
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    text-align: center ;
+    color: white;
+}
+.news-detail .button-primary {
+    margin-bottom: 20px;
+}
+.news-detail-img img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+.news-detail-description {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+.news-detail-date {
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+}
+/* news-detail */
+
+/* footer */
+.footer {
+    padding: 90px 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+/* footer */
+
+
+
+/* media */
+@media screen and (max-width: 900px) {
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    #burger-button {
+        display: block;
+        background-color: #ffffff;
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .home {
+        display: block;
+        padding: 90px 0;
+        height: 100%;
+        text-align: center;
+    }
+    .home-title {
+        font-size: 32px;
+    }
+    .home-description {
+        width: 100%;
+        font-size: 14px;
+    }
+    .last-news {
+        height: 100%;
+        display: block;
+        padding: 90px 0;
+    }
+    .news-row {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .news-img {
+        text-align: center;
+    }
+    .news-img img {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+    }
+    .primary-title {
+        text-align: center;
+    }
+    .news {
+        height: 100%;
+        display: block;
+        padding: 90px 0;
+    }
+    .news-detail {
+        height: 100%;
+        display: block;
+        padding: 90px 0;
+    }
+    .news-detail-img {
+        text-align: center;
+    }
+    .news-detail .button-primary {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+/* media */

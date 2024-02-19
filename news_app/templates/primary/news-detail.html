@@ -1,0 +1,15 @@
+{% extends '../base.html' %} {% load static %} {% block content %}
+<div class="bg">
+  <a onclick="javascript:history.back();return false;" class="btn_back"><i class="fa-solid fa-arrow-left"></i></a>
+  <div class="container">
+    <div class="news-detail">
+      <img class="img-news-details" src="{{ post.image }}" alt="{{ post.title }}" />
+      <p class="news-date">{{ post.post_date|date:"d.m.Y" }}</p>
+      <h1 class="head">{{ post.title }}</h1>
+      <p class="news-text">{{ post.description }}</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="home">
+    <div class="container">
+        <h1 class="home-title">Welcome to RPOMANGA</h1>
+        <p class="home-description">
+            "Откройте для себя захватывающие миры манги и манхвы на нашем сайте! У нас вы найдете огромный выбор популярных и новых серий, чтобы погрузиться в увлекательные истории. Разнообразие жанров — от фэнтези и романтики до научной фантастики и боевика — удовлетворит вкусы каждого читателя. Мы постоянно обновляемся, чтобы предложить вам самые свежие выпуски в высоком качестве. Насладитесь прекрасным искусством и захватывающими сюжетами, которые ожидают вас на страницах нашего сайта манги и манхвы!"</p>
+    </div>
+</section>
+<section class="last-news">
+    <div class="container">
+        <div class="news-row">
+            {% for post in posts %}
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                </div>
+                <h3 class="news-title">{{ post.title }}</h3>
+                <h3 class="news-date">{{ post.post_date|date:"d.m.Y" }}</h3>
+                <a href="{% url 'news_detail_page' pk=post.pk %}" class="button-primary">Read</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
